@@ -4,6 +4,8 @@ body, html {
     margin: 0;
     font-size: 28px;;
     display: flex;
+    background-color: rgb(247, 247, 247);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .top, .bottom {
@@ -16,26 +18,49 @@ body, html {
     flex-direction: column;
 
     padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+
 }
 
 .top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
     padding: 3rem 10rem 0 1.4rem;
+
+    font-weight: 500;
 }
 
 .left {
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
     flex: 1;
 
-    background-color: deepskyblue;
+    background-color: rgb(247, 247, 247);
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
 }
 
 .logo {
-    margin: auto;
-    margin-top: 50%;
-    padding: 5%;
+
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
 
     font-size: 2rem;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.493);
+    color: white;
+    background-color:   rgba(0, 0, 0, 0.427);
+
 }
 
 .right {
@@ -51,18 +76,21 @@ body, html {
 }
 
 h1 {
-    margin: 1.2rem 0 0 1.4rem;
+    margin: 0;
+    margin-bottom: .7rem;
     font-size: 1.2rem;
+    font-weight: 300;
 }
 
 p {
     display: flex;
     flex-direction: column;
 
+    margin: 0;
     padding: 0;
 }
 
-span {
+#log-in {
     margin-top: 1rem;
     font-size: .8rem;
 }
@@ -70,6 +98,7 @@ span {
 .form-container {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.182);
     margin-bottom: 5px;
+    padding: .8rem 0 1rem 1.4rem;
 }
 
 form {
@@ -79,25 +108,69 @@ form {
 
 }
 
+strong {
+    font-size: .6rem;
+}
+
+label {
+    font-size: .5rem;
+}
+
 .inputs {
     display: flex;
-    gap: 3rem;
-    padding: 0 0 1rem 1.4rem;
+    flex-direction: column;
+    gap: .7rem;
+    margin-top: 1rem;
+
+}
+
+.inputs > div {
+    display: flex;
+    gap: 5%;
 }
 
 input {
+    outline: none;
+    border-color: rgb(213, 213, 213);
+    border-style: solid;
+    border-radius: 5px;
     height: 1rem;
     width: 10rem;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(96, 96, 255);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+   color:rgb(75, 75, 234)
 }
 
 button {
     width: 9rem;
     height: 2rem;
 
+    border: 1px solid gray;
     color: rgb(53, 53, 53);
-    background-color: deepskyblue;
+    background-color: rgb(243, 252, 255);
     border-radius: 10px;
 
     font-weight: 800;
     font-size: .8rem;
+}
+
+button:hover {
+    background-color: rgb(230, 249, 255);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+
 }
